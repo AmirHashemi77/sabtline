@@ -6,7 +6,6 @@ import RoutesComponet from "./Routes/RoutesComponet";
 import Header from "./components/layout/header/Header";
 import { BrowserRouter } from "react-router-dom";
 import Footer from "./components/layout/footer/Footer";
-import "./index.css";
 
 function App() {
   return (
