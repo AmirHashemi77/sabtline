@@ -1,5 +1,5 @@
 import { AiOutlineClose } from "react-icons/ai";
-import { ReactNode, useState, forwardRef, useImperativeHandle, useEffect, useRef } from "react";
+import { useState, forwardRef, useImperativeHandle, useEffect, useRef, type ReactNode } from "react";
 import { createPortal } from "react-dom";
 
 interface IProps {

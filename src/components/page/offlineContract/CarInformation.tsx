@@ -1,9 +1,7 @@
-import { useEffect, useState, type FC, type SetStateAction } from "react";
-import type { Dispatch } from "redux";
+import { useEffect, useState, type FC } from "react";
 import { useContractStore } from "../../../store/contract/store";
 import { CONTRACT_ID } from "../../../constants/constants";
-import { useGetContractDataQuery } from "../../../services/onlineContract/onlineContractServices";
-import { useCreateOfflineContracts, useGetCarSystemQuery, useGetCarTypeQuery, useGetColorTitleQuery } from "../../../services/offlineContract/offlineContractServices";
+import { useCreateOfflineContracts, useGetCarSystemQuery, useGetCarTypeQuery, useGetColorTitleQuery, useGetContractDataQuery } from "../../../services/offlineContract/offlineContractServices";
 import { Controller, useForm, type SubmitHandler } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import type { ICarSystemResponse, IOfflineContractCarInformation } from "../../../type/offlineContract.types";

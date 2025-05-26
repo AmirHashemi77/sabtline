@@ -1,5 +1,4 @@
 import { IoCheckmarkDoneCircleOutline } from "react-icons/io5";
-import type { ContractResponse } from "../../../type/onlineContact.types";
 import type { FC } from "react";
 import { Input } from "../../ui/input";
 import { Textarea } from "../../ui/textarea";
@@ -7,6 +6,7 @@ import { ShareType } from "../../../constants/constants";
 import { FaCarSide, FaHandshake } from "react-icons/fa";
 import { MdOutlinePayment, MdPerson } from "react-icons/md";
 import { Button } from "../../ui/button";
+import type { ContractResponse } from "@/type/onlineContact.types";
 
 interface PropsType {
   ContractData: ContractResponse | null | undefined;

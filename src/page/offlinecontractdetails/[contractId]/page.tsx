@@ -1,7 +1,6 @@
 import { useEffect, type FC } from "react";
 import { redirect, useNavigate, useParams } from "react-router-dom";
-import { useGetContractDataQuery } from "../../../services/offlineContract/offlineContractServices";
-import { useFinalConfirmRequest } from "../../../services/onlineContract/onlineContractServices";
+import { useFinalConfirmRequest, useGetContractDataQuery } from "../../../services/onlineContract/onlineContractServices";
 import { Button } from "../../../components/ui/button";
 import { GrFormPreviousLink } from "react-icons/gr";
 import BreadCrumbComponent from "../../../components/common/breadcrumb/BreadCrumbComponent";
