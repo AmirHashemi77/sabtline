@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import userManager from "../../sso/userManager";
+import userManager from "@/sso/userManager";
 import ResponseLoading from "../../components/common/responseLoading/ResponseLoading";
 
 export default function SignoutCallback() {

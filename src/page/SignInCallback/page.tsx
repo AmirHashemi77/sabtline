@@ -4,6 +4,7 @@ import { CallbackComponent } from "redux-oidc";
 import { useRegisterStore } from "../../store/register/store";
 import { logoutOnLoginError } from "../../sso/ssoUtils";
 import ResponseLoading from "../../components/common/responseLoading/ResponseLoading";
+import userManager from "../../sso/userManager";
 
 const SignInCallbackPage = () => {
   const navigate = useNavigate();

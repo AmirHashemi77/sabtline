@@ -2,6 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: Vazir;
+  src: url("../public/fonts/Vazir-Medium-FD-WOL.ttf");
+}
+
+body {
+  font-family: Vazir;
+}
+
 .custom-scrollbar {
   scrollbar-width: thin;
   scrollbar-color: #4443 #f0f0f0;

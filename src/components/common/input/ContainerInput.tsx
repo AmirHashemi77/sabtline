@@ -1,11 +1,11 @@
-import {FC, ReactNode} from "react";
+import type { FC, ReactNode } from "react";
 
 interface IProps {
-    children: ReactNode;
+  children: ReactNode;
 }
 
-const ContainerInput: FC<IProps> = ({children}) => {
-    return <div className='flex flex-col justify-between w-full mb-5'>{children}</div>
-}
+const ContainerInput: FC<IProps> = ({ children }) => {
+  return <div className="flex flex-col justify-between w-full mb-5">{children}</div>;
+};
 
 export default ContainerInput;

@@ -1,5 +1,5 @@
-import { ChangeEvent, useRef, useState, MouseEvent } from "react";
-import { FieldValues, UseFormRegister } from "react-hook-form";
+import { useRef, useState, type ChangeEvent, type MouseEvent } from "react";
+import type { FieldValues, UseFormRegister } from "react-hook-form";
 import { IoChevronDownSharp } from "react-icons/io5";
 
 interface IProps<T extends FieldValues> {
@@ -29,7 +29,6 @@ export default function SelectInput<T extends FieldValues>({ placeHolder, custom
     <>
       {isOpenList && <div onClick={() => setIsOpenList(false)} className="w-full h-full absolute top-0 right-0"></div>}
       <div className={`w-full relative flex ${customClassName}`}>
-        {/* @ts-expect-error disable name error*/}
         <input
           {...(register && register(name))}
           ref={inputRef as React.RefObject<HTMLInputElement>}
