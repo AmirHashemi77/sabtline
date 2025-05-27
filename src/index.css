@@ -68,7 +68,12 @@ body {
   height: 0;
   display: none;
 }
-
+.dark .custom-scrollbar-contract-modal {
+  background: #444;
+}
+.dark .custom-scrollbar-contract-modal::-webkit-scrollbar-track {
+  background: #444;
+}
 .no-scrollbar {
   scrollbar-width: none;
   -ms-overflow-style: none;

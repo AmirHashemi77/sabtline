@@ -14,7 +14,7 @@ import { Input } from "../../ui/input";
 import ErrorMessage from "../../common/errorMessage/ErrorMessage";
 import DatePickerComponent from "../../common/datePicker/DatePickerComponent";
 import { DateObject } from "react-multi-date-picker";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@radix-ui/react-select";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../../ui/select";
 import { DataTable } from "../../ui/dataTable";
 
 const BuyerInformation: FC = () => {

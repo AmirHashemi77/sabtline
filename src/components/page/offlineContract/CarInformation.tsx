@@ -7,7 +7,6 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import type { ICarSystemResponse, IOfflineContractCarInformation } from "../../../type/offlineContract.types";
 import { carInfoSchema } from "../../../schema/offlineContractSchema";
 import ResponseLoading from "../../common/responseLoading/ResponseLoading";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@radix-ui/react-select";
 import ErrorMessage from "../../common/errorMessage/ErrorMessage";
 import DatePicker, { DateObject } from "react-multi-date-picker";
 import persian from "react-date-object/calendars/persian";
@@ -16,6 +15,7 @@ import persian_fa from "react-date-object/locales/persian_fa";
 import { Input } from "../../ui/input";
 import { Button } from "../../ui/button";
 import CarLicensePlateInput from "../../common/carLicensePlateInputs/CarLicensePlateInputs";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../../ui/select";
 
 const carDocumentHolderArr = [
   {

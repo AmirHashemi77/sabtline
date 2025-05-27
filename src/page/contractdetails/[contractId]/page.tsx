@@ -23,11 +23,13 @@ const ContractDetailsPage: FC = () => {
 
   return (
     <>
-      <div className="flex items-center justify-center bg-gray-50 px-3 py-2 rounded-md dark:bg-card relative">
+      <div className="flex items-center justify-center bg-gray-50 px-3 py-[18px] rounded-md dark:bg-card relative ">
         <button className="md:hidden absolute left-8 top-1/2 -translate-y-1/2" onClick={() => navigate(-1)}>
           <GrFormPreviousLink className="text-2xl" />
         </button>
-        <Button className="hidden md:flex absolute left-8 top-1/2 -translate-y-1/2">بازگشت</Button>
+        <Button className="hidden md:flex absolute left-8 top-1/2 -translate-y-1/2" onClick={() => navigate(-1)}>
+          بازگشت
+        </Button>
         <BreadCrumbComponent
           items={[
             { label: "خانه", link: "/" },

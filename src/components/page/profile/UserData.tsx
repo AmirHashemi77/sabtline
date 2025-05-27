@@ -1,7 +1,7 @@
-import { Label } from "@radix-ui/react-select";
 import type { FC } from "react";
 import { Input } from "../../ui/input";
 import { shareData } from "../../../sso/shareData";
+import { Label } from "@radix-ui/react-label";
 
 const UserData: FC = () => {
   const userData = typeof window !== "undefined" && localStorage.getItem(shareData.SSO_SABT_LINE) && JSON.parse(localStorage.getItem(shareData.SSO_SABT_LINE) as string)?.profile;

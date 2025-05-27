@@ -13,6 +13,7 @@ const OnlineContract = lazy(() => import("../page/onlinecontract/page"));
 const ProfilePage = lazy(() => import("../page/profile/page"));
 const Register = lazy(() => import("../page/register/page"));
 const Services = lazy(() => import("../page/services/page"));
+const InquiryIdDatailsPage = lazy(() => import("../page/inquirydetails/[inquiryId]/page"));
 // const SignInCallbackPage = lazy(() => import("../page/SignInCallback/page"));
 // const SignOutCallbackPage = lazy(() => import("../page/SignOutCallback/page"));
 const NotFound = lazy(() => import("../page/not-found"));
@@ -24,7 +25,7 @@ const RoutesComponet = () => {
         <Route path="/" element={<Home />} />
         <Route path="/contractdetails/:contractId" element={<ContractDetailsPage />} />
         <Route path="/greenpaper" element={<GreenPaper />} />
-        <Route path="/inquirydetails/:inquiryId" element={<Home />} />
+        <Route path="/inquirydetails/:inquiryId" element={<InquiryIdDatailsPage />} />
         <Route path="/offlinecontract" element={<OfflineContract />} />
         <Route path="/offlinecontractdetails/:contractId" element={<OfflineContractDetailsPage />} />
         <Route path="/onlinecontract" element={<OnlineContract />} />
