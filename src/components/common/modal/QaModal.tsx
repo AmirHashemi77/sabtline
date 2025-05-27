@@ -1,4 +1,4 @@
-import { Dialog, DialogContent, DialogDescription, DialogTitle } from "@radix-ui/react-dialog";
+import { Dialog, DialogContent, DialogDescription, DialogTitle } from "../../ui/dialog";
 import type { FC } from "react";
 import { DialogFooter, DialogHeader } from "../../ui/dialog";
 import { Button } from "../../ui/button";

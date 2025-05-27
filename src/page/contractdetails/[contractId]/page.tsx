@@ -23,7 +23,7 @@ const ContractDetailsPage: FC = () => {
 
   return (
     <>
-      <div className="flex items-center justify-center bg-gray-50 px-3 py-[18px] rounded-md dark:bg-card relative ">
+      <div className="flex items-center justify-center bg-gray-50 px-3 py-[18px] rounded-md dark:bg-card relative my-10">
         <button className="md:hidden absolute left-8 top-1/2 -translate-y-1/2" onClick={() => navigate(-1)}>
           <GrFormPreviousLink className="text-2xl" />
         </button>

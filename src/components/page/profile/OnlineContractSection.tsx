@@ -4,12 +4,12 @@ import { useGetUserContractsQuery } from "../../../services/profile/profileServi
 import { Link } from "react-router-dom";
 import { DataTable } from "../../ui/dataTable";
 
-const contractStateObj = {
-  Draft: "موقت",
-  Pendding: "در انتظار امضای طرفین",
-  Signed: "امضا شده",
-  Canceld: "لغو شده",
-};
+// const contractStateObj = {
+//   Draft: "موقت",
+//   Pendding: "در انتظار امضای طرفین",
+//   Signed: "امضا شده",
+//   Canceld: "لغو شده",
+// };
 
 const OnlineContractSection: FC = () => {
   const [activeFilter, setActiveFilter] = useState(0);
@@ -27,8 +27,8 @@ const OnlineContractSection: FC = () => {
       const tableDataArr = getUserContractsData.data.data?.map((item) => {
         return {
           createDateTime: new Date(item.createDateTime).toLocaleString("fa"),
-          type: item.type === "Online" ? "آنلاین" : "آفلاین",
-          contractState: contractStateObj[item.contractState],
+          typeDescription: item.typeDescription,
+          contractStateDescription: item.contractStateDescription,
           amount: item.amount,
           contractBusinessId: item.businessId,
           // date: new Date(item.date).toLocaleString("fa"),
@@ -44,11 +44,11 @@ const OnlineContractSection: FC = () => {
       header: "تاریخ",
     },
     {
-      accessorKey: "type",
+      accessorKey: "typeDescription",
       header: "نوع قرارداد",
     },
     {
-      accessorKey: "contractState",
+      accessorKey: "contractStateDescription",
       header: "وضعیت قرارداد",
     },
     {

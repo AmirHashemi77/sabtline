@@ -71,8 +71,11 @@ export interface Contract {
   notaryDate: string;
   notaryNumber: string;
   notaryFeePayer: "None" | string;
+  notaryFeePayerDescription: string;
+  typeDescription: string;
   vehicleDeliveryDate: string;
   carDocumentHolder: "None" | string;
+  carDocumentHolderDescription: string;
   contractState: "Draft" | string;
   description: string;
 }
@@ -89,7 +92,8 @@ export interface ContractPayment {
   contractBusinessId: string;
   amount: number;
   payDate: string;
-  type: "FullyPaid" | string;
+  type: string;
+  typeDescription: string;
   description: string;
 }
 
@@ -101,6 +105,7 @@ export interface ContractParty {
   contractSide: "Buyer" | "Seller" | string;
   sharePersentage: number;
   shareType: "Dong" | string;
+  shareTypeDescription: string;
 }
 
 export interface Person {

@@ -14,8 +14,8 @@ const OfflineContractSection: FC = () => {
       const tableDataArr = getUserContractsData.data.data?.map((item) => {
         return {
           createDateTime: new Date(item.createDateTime).toLocaleString("fa"),
-          type: item.type,
-          contractState: item.contractState,
+          typeDescription: item.typeDescription,
+          contractStateDescription: item.contractStateDescription,
           amount: item.amount,
           businessId: item.businessId,
           // date: new Date(item.date).toLocaleString("fa"),
@@ -31,11 +31,11 @@ const OfflineContractSection: FC = () => {
       header: "تاریخ",
     },
     {
-      accessorKey: "type",
+      accessorKey: "typeDescription",
       header: "نوع قرارداد",
     },
     {
-      accessorKey: "contractState",
+      accessorKey: "contractStateDescription",
       header: "وضعیت قرارداد",
     },
     {

@@ -1,7 +1,6 @@
 import type { FC } from "react";
 import type { ContractResponse } from "../../../type/onlineContact.types";
 import { Input } from "../../ui/input";
-import { ShareType } from "../../../constants/constants";
 import { Textarea } from "../../ui/textarea";
 import { IoCheckmarkDoneCircleOutline } from "react-icons/io5";
 import { FaCarSide, FaHandshake, FaIdCard, FaIdCardAlt } from "react-icons/fa";
@@ -306,7 +305,7 @@ const ContractDetails: FC<PropsType> = ({ ContractData, finalConfirmHandler, fin
 
           <div className="flex flex-col items-start col-span-12 md:col-span-6 lg:col-span-4">
             <p className="text-gray-800 text-center text-sm text-nowrap p-2 dark:text-card-foreground">نوع سهم :</p>
-            <Input disabled readOnly value={ShareType.find((share) => share.value === item.shareType)?.title} className="flex-1 py-2" />
+            <Input disabled readOnly value={item.shareTypeDescription} className="flex-1 py-2" />
           </div>
         </div>
       ));
@@ -383,7 +382,7 @@ const ContractDetails: FC<PropsType> = ({ ContractData, finalConfirmHandler, fin
 
             <div className="flex flex-col items-start col-span-12 md:col-span-6 lg:col-span-4">
               <p className="text-gray-800 text-center text-sm text-nowrap p-2 dark:text-card-foreground">نوع سهم :</p>
-              <Input disabled readOnly value={ShareType.find((share) => share.value === item.shareType)?.title} className="flex-1 py-2" />
+              <Input disabled readOnly value={item.shareTypeDescription} className="flex-1 py-2" />
             </div>
           </div>
         );

@@ -2,7 +2,6 @@ import { IoCheckmarkDoneCircleOutline } from "react-icons/io5";
 import type { FC } from "react";
 import { Input } from "../../ui/input";
 import { Textarea } from "../../ui/textarea";
-import { ShareType } from "../../../constants/constants";
 import { FaCarSide, FaHandshake } from "react-icons/fa";
 import { MdOutlinePayment, MdPerson } from "react-icons/md";
 import { Button } from "../../ui/button";
@@ -80,7 +79,7 @@ const OfflineContractDetails: FC<PropsType> = ({ ContractData, finalConfirmHandl
 
           <div className="flex flex-col items-start col-span-12 md:col-span-6 lg:col-span-4 ">
             <p className="text-gray-800 text-center text-sm text-nowrap p-2 dark:text-card-foreground"> هزینه محضر :</p>
-            <Input disabled readOnly className="flex-1 py-2" value={ContractData.contract.notaryFeePayer === "Buyer" ? "خریدار" : "فروشنده"} />
+            <Input disabled readOnly className="flex-1 py-2" value={ContractData.contract.notaryFeePayerDescription} />
           </div>
 
           <div className="flex flex-col items-start col-span-12 md:col-span-6 lg:col-span-4 ">
@@ -89,7 +88,7 @@ const OfflineContractDetails: FC<PropsType> = ({ ContractData, finalConfirmHandl
           </div>
           <div className="flex flex-col items-start col-span-12 md:col-span-6 lg:col-span-4 ">
             <p className="text-gray-800 text-center text-sm text-nowrap p-2 dark:text-card-foreground"> مدارک تحویل :</p>
-            <Input disabled readOnly className="flex-1 py-2" value={ContractData.contract.carDocumentHolder === "Buyer" ? "خریدار" : "فروشنده"} />
+            <Input disabled readOnly className="flex-1 py-2" value={ContractData.contract.carDocumentHolderDescription} />
           </div>
           <div className="flex flex-col items-start col-span-12 md:col-span-6 lg:col-span-4 ">
             <p className="text-gray-800 text-center text-sm text-nowrap p-2 dark:text-card-foreground"> پلاک :</p>
@@ -174,7 +173,7 @@ const OfflineContractDetails: FC<PropsType> = ({ ContractData, finalConfirmHandl
 
           <div className="flex flex-col items-start col-span-12 md:col-span-6 lg:col-span-4">
             <p className="text-gray-800 text-center text-sm text-nowrap p-2 dark:text-card-foreground">نوع سهم :</p>
-            <Input disabled readOnly value={ShareType.find((share) => share.value === item.shareType)?.title} className="flex-1 py-2" />
+            <Input disabled readOnly value={item.shareTypeDescription} className="flex-1 py-2" />
           </div>
         </div>
       ));
@@ -251,7 +250,7 @@ const OfflineContractDetails: FC<PropsType> = ({ ContractData, finalConfirmHandl
 
             <div className="flex flex-col items-start col-span-12 md:col-span-6 lg:col-span-4">
               <p className="text-gray-800 text-center text-sm text-nowrap p-2 dark:text-card-foreground">نوع سهم :</p>
-              <Input disabled readOnly value={ShareType.find((share) => share.value === item.shareType)?.title} className="flex-1 py-2" />
+              <Input disabled readOnly value={item.shareTypeDescription} className="flex-1 py-2" />
             </div>
           </div>
         );
@@ -302,7 +301,7 @@ const OfflineContractDetails: FC<PropsType> = ({ ContractData, finalConfirmHandl
 
             <div className="flex flex-col items-start col-span-12 md:col-span-6 lg:col-span-4">
               <p className="text-gray-800 text-center text-sm text-nowrap p-2 dark:text-card-foreground"> نوع پرداخت :</p>
-              <Input disabled readOnly value={item.type} className="flex-1 py-2" />
+              <Input disabled readOnly value={item.typeDescription} className="flex-1 py-2" />
             </div>
 
             <div className="flex flex-col items-start col-span-12  lg:col-span-8">
