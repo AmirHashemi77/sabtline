@@ -120,7 +120,7 @@ const ProfilePage: FC = () => {
                 </li>
                 <li
                   onClick={signOut}
-                  className="flex items-center gap-2 p-3 bg-gray-50 text-gray-800  rounded-md hover:bg-primary hover:text-white w-full transition-all cursor-point dark:bg-[#383838] dark:text-card-foreground dark:hover:bg-background dark:hover:text-card-foreground "
+                  className="flex cursor-pointer items-center gap-2 p-3 bg-gray-50 text-gray-800  rounded-md hover:bg-primary hover:text-white w-full transition-all cursor-point dark:bg-[#383838] dark:text-card-foreground dark:hover:bg-background dark:hover:text-card-foreground "
                 >
                   <GiExitDoor className="text-2xl" />
                   خروج

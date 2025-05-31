@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import Loading from "../page/loading";
 import SignInCallbackPage from "../page/SignInCallback/page";
 import SignOutCallbackPage from "../page/SignOutCallback/page";
+import { useRegisterStore } from "../store/register/store";
 
 const Home = lazy(() => import("../page/page"));
 const ContractDetailsPage = lazy(() => import("../page/contractdetails/[contractId]/page"));
@@ -19,17 +20,19 @@ const InquiryIdDatailsPage = lazy(() => import("../page/inquirydetails/[inquiryI
 const NotFound = lazy(() => import("../page/not-found"));
 
 const RoutesComponet = () => {
+  const verifyToken = useRegisterStore((state) => state.verifyToken);
+
   return (
     <Suspense fallback={<Loading />}>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/contractdetails/:contractId" element={<ContractDetailsPage />} />
-        <Route path="/greenpaper" element={<GreenPaper />} />
-        <Route path="/inquirydetails/:inquiryId" element={<InquiryIdDatailsPage />} />
-        <Route path="/offlinecontract" element={<OfflineContract />} />
-        <Route path="/offlinecontractdetails/:contractId" element={<OfflineContractDetailsPage />} />
-        <Route path="/onlinecontract" element={<OnlineContract />} />
-        <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/contractdetails/:contractId" element={verifyToken ? <ContractDetailsPage /> : <Register />} />
+        <Route path="/greenpaper" element={verifyToken ? <GreenPaper /> : <Register />} />
+        <Route path="/inquirydetails/:inquiryId" element={verifyToken ? <InquiryIdDatailsPage /> : <Register />} />
+        <Route path="/offlinecontract" element={verifyToken ? <OfflineContract /> : <Register />} />
+        <Route path="/offlinecontractdetails/:contractId" element={verifyToken ? <OfflineContractDetailsPage /> : <Register />} />
+        <Route path="/onlinecontract" element={verifyToken ? <OnlineContract /> : <Register />} />
+        <Route path="/profile" element={verifyToken ? <ProfilePage /> : <Register />} />
         <Route path="/register" element={<Register />} />
         <Route path="/services" element={<Services />} />
         <Route path="/SignInCallback" element={<SignInCallbackPage />} />
