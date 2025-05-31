@@ -5,9 +5,9 @@ import { contractInfoSchema, pledgeInfoSchema } from "../../../schema/onlineCont
 import { useContractStore } from "../../../store/contract/store";
 import { useAddPaymentRequest, useGetPaymentsQuery, useLastStepUpdateRequest, useRemovePaymentRequest } from "../../../services/onlineContract/onlineContractServices";
 import { DateObject } from "react-multi-date-picker";
-import persian from "react-date-object/calendars/persian";
+// import persian from "react-date-object/calendars/persian";
 // eslint-disable-next-line camelcase
-import persian_fa from "react-date-object/locales/persian_fa";
+// import persian_fa from "react-date-object/locales/persian_fa";
 import { Button } from "../../ui/button";
 import { FaRegTrashAlt } from "react-icons/fa";
 import QaModal from "../../common/modal/QaModal";
@@ -132,7 +132,7 @@ const ContractInformation: FC<{
             // contractBusinessId: item.contractBusinessId,
             businessId: item.businessId,
             // eslint-disable-next-line camelcase
-            payDate: new DateObject({ calendar: persian, locale: persian_fa, date: item.payDate }),
+            payDate: new Date(item.payDate).toLocaleString("fa-ir", { dateStyle: "short" }),
             type: item.type === "FullyPaid" ? "پرداخت کامل" : "",
             action: <ActionButton businessIdArg={item.businessId} />,
           };

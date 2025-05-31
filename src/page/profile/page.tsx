@@ -14,10 +14,10 @@ import { CiBoxList } from "react-icons/ci";
 import { RiWifiOffLine } from "react-icons/ri";
 import { GiExitDoor } from "react-icons/gi";
 import InquiriesSection from "../../components/page/profile/InquiriesSection";
-import OnlineContractSection from "../../components/page/profile/OfflineContractSection";
 import OfflineContractSection from "../../components/page/profile/OfflineContractSection";
 import UserData from "../../components/page/profile/UserData";
 import { shareData } from "../../sso/shareData";
+import OnlineContractSection from "../../components/page/profile/OnlineContractSection";
 
 const tilteArr = ["ایجاد قرار داد", "لیست استعلامات", "قرارداد های آنلاین شما", "قرارداد های آفلاین شما", "اطلاعات کاربری"];
 

@@ -1,5 +1,5 @@
 import { useEffect, type FC } from "react";
-import { redirect, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { useFinalConfirmRequest, useGetContractDataQuery } from "../../../services/onlineContract/onlineContractServices";
 import { Button } from "../../../components/ui/button";
 import { GrFormPreviousLink } from "react-icons/gr";
@@ -15,7 +15,7 @@ const OfflineContractDetailsPage: FC = () => {
 
   const finalConfirmHandler = async () => {
     await finalConfirmMutate({ BusinessId: contractData?.contract.businessId ? contractData?.contract.businessId : "" });
-    redirect("/profile");
+    navigate("/profile");
   };
 
   useEffect(() => {

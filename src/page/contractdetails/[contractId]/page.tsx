@@ -1,6 +1,6 @@
 import { useEffect, type FC } from "react";
 import { GrFormPreviousLink } from "react-icons/gr";
-import { redirect, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { Button } from "../../../components/ui/button";
 import BreadCrumbComponent from "../../../components/common/breadcrumb/BreadCrumbComponent";
 import ResponseLoading from "../../../components/common/responseLoading/ResponseLoading";
@@ -15,7 +15,7 @@ const ContractDetailsPage: FC = () => {
 
   const finalConfirmHandler = async () => {
     await finalConfirmMutate({ BusinessId: contractData?.contract.businessId ? contractData?.contract.businessId : "" });
-    redirect("/profile");
+    navigate("/profile");
   };
   useEffect(() => {
     getContractData();

@@ -3,7 +3,7 @@ import { NumberInput } from "../input/NumberInput";
 import { zodResolver } from "@hookform/resolvers/zod";
 import type { IPlate } from "../../../type/general.types";
 import { plateSchema } from "../../../schema/offlineContractSchema";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@radix-ui/react-select";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "../../ui/select";
 
 const alphabetArr = [
   { value: "الف", label: "الف" },

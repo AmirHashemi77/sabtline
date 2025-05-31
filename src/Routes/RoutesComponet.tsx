@@ -33,7 +33,7 @@ const RoutesComponet = () => {
         <Route path="/register" element={<Register />} />
         <Route path="/services" element={<Services />} />
         <Route path="/SignInCallback" element={<SignInCallbackPage />} />
-        <Route path="/SignOutCallback" element={<SignOutCallbackPage />} />
+        <Route path="/signout-callback-oidc" element={<SignOutCallbackPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Suspense>
