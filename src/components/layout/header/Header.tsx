@@ -3,7 +3,7 @@ import { MdWbSunny } from "react-icons/md";
 import { useRegisterStore } from "../../../store/register/store";
 import { useThemeStore } from "../../../store/theme/store";
 import HeaderLogo from "./HeaderLogo";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Button } from "../../ui/button";
 import { FaBars, FaMoon } from "react-icons/fa";
 import { IoPersonOutline } from "react-icons/io5";
@@ -47,6 +47,7 @@ const Header = () => {
   const isAuthChecking = useRegisterStore((state) => state.isAuthChecking);
   const setIsAuthChecking = useRegisterStore((state) => state.setIsAuthChecking);
   const { theme, toggleTheme } = useThemeStore();
+  const location = useLocation();
   // const {data: userData, isPending: getUserPendding, refetch: getUserDataRefetch} = useGetUserDataQuery();
 
   useEffect(() => {
@@ -59,6 +60,9 @@ const Header = () => {
          }
      }, [verifyToken, isAuthChecking]);*/
 
+  useEffect(() => {
+    setSidebarOpen(false);
+  }, [location.pathname]);
   return (
     <>
       <div className="w-full fixed bg-white dark:bg-[#252525] shadow-sm py-4 z-50">

@@ -22,9 +22,11 @@ interface IProps {
   placeholder: string;
   format?: string;
   maxDate?: string | number | Date | DateObject | undefined;
+  disabled?: boolean;
+  readOnly?: boolean;
 }
 
-const DatePickerComponent: FC<IProps> = ({ value, onChange, className, placeholder, format, maxDate }) => {
+const DatePickerComponent: FC<IProps> = ({ value, onChange, className, placeholder, format, maxDate, disabled = false, readOnly = false }) => {
   const { theme } = useThemeStore();
   return (
     <>
@@ -42,6 +44,8 @@ const DatePickerComponent: FC<IProps> = ({ value, onChange, className, placehold
         maxDate={maxDate}
         /*eslint-disable-next-line camelcase */
         locale={persian_fa}
+        disabled={disabled}
+        readOnly={readOnly}
       />
       <CiCalendar className="absolute left-3 top-[7px] cursor-pointer text-2xl z-10 bg-white dark:bg-card dark:text-card-foreground" />
     </>

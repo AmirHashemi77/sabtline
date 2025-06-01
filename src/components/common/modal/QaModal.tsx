@@ -13,7 +13,7 @@ interface IProps {
 
 const QaModal: FC<IProps> = ({ isOpen, title, description, onCancel, onAccept }) => {
   return (
-    <Dialog open={isOpen} modal={true}>
+    <Dialog open={isOpen} onOpenChange={(open) => !open && onCancel?.()} modal>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
           <DialogTitle className="py-5 text-center font-medium">{title ?? "آیا از انجام عملیات اطمینان دارید؟"}</DialogTitle>

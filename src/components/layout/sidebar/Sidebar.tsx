@@ -32,7 +32,7 @@ const Sidebar: FC<Iprops> = ({ isSidebarOpen, setSidebarOpen }) => {
 
   const data = [
     {
-      href: "#",
+      href: "/",
       icon: <FaHome className="text-primary" />,
       title: "خانه",
       dropdownItems: [],
@@ -44,7 +44,7 @@ const Sidebar: FC<Iprops> = ({ isSidebarOpen, setSidebarOpen }) => {
       dropdownItems: [],
     },
     {
-      href: "#",
+      href: "/services",
       icon: <FaCar className="text-primary" />,
       title: "خدمات",
       dropdownItems: [],
